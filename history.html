@@ -1,389 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
+
+
+    <style>
+        header {
+            height: 600px;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1244&q=80") center right/cover no-repeat;
+        }
+
+        /* td,
+        th {
+            padding: 8px 0;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px gray solid;
+        } */
+
+    </style>
 </head>
-<body>
+
+<body class="text-gray-800 font-light">
     <!-- This example requires Tailwind CSS v2.0+ -->
-<div class="relative bg-gray-50 overflow-hidden">
-    <div class="hidden sm:block sm:absolute sm:inset-y-0 sm:h-full sm:w-full" aria-hidden="true">
-      <div class="relative h-full max-w-7xl mx-auto">
-        <svg class="absolute right-full transform translate-y-1/4 translate-x-1/4 lg:translate-x-1/2" width="404" height="784" fill="none" viewBox="0 0 404 784">
-          <defs>
-            <pattern id="f210dbf6-a58d-4871-961e-36d5016a0f49" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-              <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
-            </pattern>
-          </defs>
-          <rect width="404" height="784" fill="url(#f210dbf6-a58d-4871-961e-36d5016a0f49)" />
-        </svg>
-        <svg class="absolute left-full transform -translate-y-3/4 -translate-x-1/4 md:-translate-y-1/2 lg:-translate-x-1/2" width="404" height="784" fill="none" viewBox="0 0 404 784">
-          <defs>
-            <pattern id="5d0dd344-b041-4d26-bec4-8d33ea57ec9b" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-              <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
-            </pattern>
-          </defs>
-          <rect width="404" height="784" fill="url(#5d0dd344-b041-4d26-bec4-8d33ea57ec9b)" />
-        </svg>
-      </div>
-    </div>
+    <nav class="bg-white shadow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex justify-between w-full">
+                    <div class="-ml-2 mr-2 flex items-center md:hidden order-3">
+                        <!-- Mobile menu button -->
+                        <button type="button"
+                            class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                            aria-controls="mobile-menu" aria-expanded="false">
+                            <span class="sr-only">Open main menu</span>
+                            <!--
+                Icon when menu is closed.
 
-    <div class="relative pt-6 pb-16 sm:pb-24">
-      <div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6">
-          <nav class="relative flex items-center justify-between sm:h-10 md:justify-center" aria-label="Global">
-            <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
-              <div class="flex items-center justify-between w-full md:w-auto">
-                <a href="#">
-                  <span class="sr-only">Workflow</span>
-                  <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="">
-                </a>
-                <div class="-mr-2 flex items-center md:hidden">
-                  <button type="button" class="bg-gray-50 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
-                    <span class="sr-only">Open main menu</span>
-                    <!-- Heroicon name: outline/menu -->
-                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                  </button>
+                Heroicon name: outline/menu
+
+                Menu open: "hidden", Menu closed: "block"
+              -->
+                            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                            <!--
+                Icon when menu is open.
+
+                Heroicon name: outline/x
+
+                Menu open: "block", Menu closed: "hidden"
+              -->
+                            <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex-shrink-0 flex items-center">
+                        <img class="hidden lg:block h-10 mr-2 w-auto" src="./logo.jpg" alt="Workflow">
+                        <img class="block lg:hidden h-8 w-auto mr-2" src="./logo.jpg" alt="Workflow"> 英特嵐建設
+
+                    </div>
+                    <div class="hidden md:ml-6 md:flex md:space-x-8">
+                        <!-- Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
+                        <a href="#"
+                            class="border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                            首頁 </a>
+                        <a href="#"
+                            class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                            關於我們 </a>
+                        <a href="#"
+                            class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                            作品 </a>
+                        <a href="#"
+                            class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                            聯絡我們 </a>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div class="hidden md:flex md:space-x-10">
-              <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Product</a>
 
-              <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Features</a>
-
-              <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Marketplace</a>
-
-              <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Company</a>
             </div>
-            <div class="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
-              <span class="inline-flex rounded-md shadow">
-                <a href="#" class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50"> Log in </a>
-              </span>
-            </div>
-          </nav>
         </div>
 
-        <!--
-          Mobile menu, show/hide based on menu open state.
-
-          Entering: "duration-150 ease-out"
-            From: "opacity-0 scale-95"
-            To: "opacity-100 scale-100"
-          Leaving: "duration-100 ease-in"
-            From: "opacity-100 scale-100"
-            To: "opacity-0 scale-95"
-        -->
-        <div class="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
-          <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
-            <div class="px-5 pt-4 flex items-center justify-between">
-              <div>
-                <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="">
-              </div>
-              <div class="-mr-2">
-                <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-                  <span class="sr-only">Close menu</span>
-                  <!-- Heroicon name: outline/x -->
-                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </div>
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="md:hidden" id="mobile-menu">
+            <div class="pt-2 pb-3 space-y-1">
+                <!-- Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" -->
+                <a href="#"
+                    class="bg-indigo-50 border-indigo-500 text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium sm:pl-5 sm:pr-6">Dashboard</a>
+                <a href="#"
+                    class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium sm:pl-5 sm:pr-6">Team</a>
+                <a href="#"
+                    class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium sm:pl-5 sm:pr-6">Projects</a>
+                <a href="#"
+                    class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium sm:pl-5 sm:pr-6">Calendar</a>
             </div>
-            <div class="px-2 pt-2 pb-3">
-              <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Product</a>
-
-              <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Features</a>
-
-              <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Marketplace</a>
-
-              <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Company</a>
-            </div>
-            <a href="#" class="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100"> Log in </a>
-          </div>
         </div>
-      </div>
+    </nav>
 
-      <main class="mt-16 mx-auto max-w-7xl px-4 sm:mt-24">
-        <div class="text-center">
-          <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-            <span class="block xl:inline">Data to enrich your</span>
-            <span class="block text-indigo-600 xl:inline">online business</span>
-          </h1>
-          <p class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
-          <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
-            <div class="rounded-md shadow">
-              <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"> Get started </a>
-            </div>
-            <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-              <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10"> Live demo </a>
-            </div>
-          </div>
-        </div>
-      </main>
-    </div>
-  </div>
+    <header class="relative">
 
+    </header>
 
-  <!-- This example requires Tailwind CSS v2.0+ -->
-<div class="px-4 sm:px-6 lg:px-8">
-    <div class="sm:flex sm:items-center">
-      <div class="sm:flex-auto">
-        <h1 class="text-xl font-semibold text-gray-900">Users</h1>
-        <p class="mt-2 text-sm text-gray-700">A list of all the users in your account including their name, title, email and role.</p>
-      </div>
-      <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
-        <button type="button" class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto">Add user</button>
-      </div>
-    </div>
-    <div class="mt-8 flex flex-col">
-      <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
-        <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
-          <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
-            <table class="min-w-full divide-y divide-gray-300">
-              <thead class="bg-gray-50">
-                <tr>
-                  <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">Name</th>
-                  <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Title</th>
-                  <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Email</th>
-                  <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Role</th>
-                  <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-6">
-                    <span class="sr-only">Edit</span>
-                  </th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-gray-200 bg-white">
-                <tr>
-                  <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">Lindsay Walton</td>
-                  <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Front-end Developer</td>
-                  <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">lindsay.walton@example.com</td>
-                  <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Member</td>
-                  <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
-                    <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit<span class="sr-only">, Lindsay Walton</span></a>
-                  </td>
-                </tr>
-
-                <!-- More people... -->
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- Footer -->
-  <!--
-  This example requires Tailwind CSS v2.0+
-
-  This example requires some changes to your config:
-
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
--->
-<footer class="bg-gray-800" aria-labelledby="footer-heading">
-    <h2 id="footer-heading" class="sr-only">Footer</h2>
-    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-      <div class="pb-8 xl:grid xl:grid-cols-5 xl:gap-8">
-        <div class="grid grid-cols-2 gap-8 xl:col-span-4">
-          <div class="md:grid md:grid-cols-2 md:gap-8">
-            <div>
-              <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Solutions</h3>
-              <ul role="list" class="mt-4 space-y-4">
-                <li>
-                  <a href="#" class="text-base text-gray-300 hover:text-white"> Marketing </a>
-                </li>
-
-                <li>
-                  <a href="#" class="text-base text-gray-300 hover:text-white"> Analytics </a>
-                </li>
-
-                <li>
-                  <a href="#" class="text-base text-gray-300 hover:text-white"> Commerce </a>
-                </li>
-
-                <li>
-                  <a href="#" class="text-base text-gray-300 hover:text-white"> Insights </a>
-                </li>
-              </ul>
-            </div>
-            <div class="mt-12 md:mt-0">
-              <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Support</h3>
-              <ul role="list" class="mt-4 space-y-4">
-                <li>
-                  <a href="#" class="text-base text-gray-300 hover:text-white"> Pricing </a>
-                </li>
-
-                <li>
-                  <a href="#" class="text-base text-gray-300 hover:text-white"> Documentation </a>
-                </li>
-
-                <li>
-                  <a href="#" class="text-base text-gray-300 hover:text-white"> Guides </a>
-                </li>
-
-                <li>
-                  <a href="#" class="text-base text-gray-300 hover:text-white"> API Status </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="md:grid md:grid-cols-2 md:gap-8">
-            <div>
-              <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Company</h3>
-              <ul role="list" class="mt-4 space-y-4">
-                <li>
-                  <a href="#" class="text-base text-gray-300 hover:text-white"> About </a>
-                </li>
-
-                <li>
-                  <a href="#" class="text-base text-gray-300 hover:text-white"> Blog </a>
-                </li>
-
-                <li>
-                  <a href="#" class="text-base text-gray-300 hover:text-white"> Jobs </a>
-                </li>
-
-                <li>
-                  <a href="#" class="text-base text-gray-300 hover:text-white"> Press </a>
-                </li>
-
-                <li>
-                  <a href="#" class="text-base text-gray-300 hover:text-white"> Partners </a>
-                </li>
-              </ul>
-            </div>
-            <div class="mt-12 md:mt-0">
-              <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Legal</h3>
-              <ul role="list" class="mt-4 space-y-4">
-                <li>
-                  <a href="#" class="text-base text-gray-300 hover:text-white"> Claim </a>
-                </li>
-
-                <li>
-                  <a href="#" class="text-base text-gray-300 hover:text-white"> Privacy </a>
-                </li>
-
-                <li>
-                  <a href="#" class="text-base text-gray-300 hover:text-white"> Terms </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="mt-12 xl:mt-0">
-          <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Language &amp; Currency</h3>
-          <form class="mt-4 sm:max-w-xs">
-            <fieldset class="w-full">
-              <label for="language" class="sr-only">Language</label>
-              <div class="relative">
-                <select id="language" name="language" class="appearance-none block w-full bg-none bg-gray-700 border border-transparent rounded-md py-2 pl-3 pr-10 text-base text-white focus:outline-none focus:ring-white focus:border-white sm:text-sm">
-                  <option selected>English</option>
-                  <option>French</option>
-                  <option>German</option>
-                  <option>Japanese</option>
-                  <option>Spanish</option>
-                </select>
-                <div class="pointer-events-none absolute inset-y-0 right-0 px-2 flex items-center">
-                  <!-- Heroicon name: solid/chevron-down -->
-                  <svg class="h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                  </svg>
+    <section class="py-16">
+        <div class="container px-4 mx-auto max-w-screen-lg">
+            <h2 class="text-center text-4xl font-normal mb-2">碧澄湖畔</h2>
+            <div class="text-center uppercase font-light text-xl mb-4 tracking-wide">Latest Projects</div>
+            <div class="flex flex-wrap">
+                <div class="w-full sm:w-7/12">
+                    <img src="./asset/1/外观.jpg" alt="" class="rounded-md drop-shadow-md">
                 </div>
-              </div>
-            </fieldset>
-            <fieldset class="mt-4 w-full">
-              <label for="currency" class="sr-only">Currency</label>
-              <div class="mt-1.5 relative">
-                <select id="currency" name="currency" class="appearance-none w-full bg-none bg-gray-700 border border-transparent rounded-md block py-2 pl-3 pr-10 text-base text-white focus:outline-none focus:ring-white focus:border-white sm:text-sm">
-                  <option>ARS</option>
-                  <option selected>AUD</option>
-                  <option>CAD</option>
-                  <option>CHF</option>
-                  <option>EUR</option>
-                  <option>GBP</option>
-                  <option>JPY</option>
-                  <option>USD</option>
-                </select>
-                <div class="pointer-events-none absolute inset-y-0 right-0 px-2 flex items-center">
-                  <!-- Heroicon name: solid/chevron-down -->
-                  <svg class="h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                  </svg>
+                <div class="w-full sm:w-5/12 px-4">
+                    <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
+                        <table class="min-w-full divide-y divide-gray-300 text-center">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th scope="col"
+                                        class="py-3.5 pl-4 pr-3 text-sm font-semibold text-gray-900 sm:pl-6">
+                                        項目
+                                    </th>
+                                    <th scope="col" class="px-3 py-3.5 text-sm font-semibold text-gray-900">
+                                        內容
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white">
+                                <tr>
+                                    <td class="whitespace-nowrap py-3 pl-4 pr-3 text-sm text-gray-900 sm:pl-6">
+                                        基地位置
+                                    </td>
+                                    <td class="whitespace-nowrap px-3 py-3 text-sm text-gray-500">
+                                        高雄市鳥松區中正路153巷口
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="whitespace-nowrap py-3 pl-4 pr-3 text-sm text-gray-900 sm:pl-6">
+                                        基地大小
+                                    </td>
+                                    <td class="whitespace-nowrap px-3 py-3 text-sm text-gray-500">
+                                        地坪140.6坪
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="whitespace-nowrap py-3 pl-4 pr-3 text-sm text-gray-900 sm:pl-6">
+                                        坪數規劃
+                                    </td>
+                                    <td class="whitespace-nowrap px-3 py-3 text-sm text-gray-500">
+                                        27-31坪
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="whitespace-nowrap py-3 pl-4 pr-3 text-sm text-gray-900 sm:pl-6">
+                                        房型規劃
+                                    </td>
+                                    <td class="whitespace-nowrap px-3 py-3 text-sm text-gray-500">
+                                        3房
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-              </div>
-            </fieldset>
-          </form>
+            </div>
         </div>
-      </div>
-      <div class="border-t border-gray-700 pt-8 lg:flex lg:items-center lg:justify-between xl:mt-0">
-        <div>
-          <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Subscribe to our newsletter</h3>
-          <p class="mt-2 text-base text-gray-300">The latest news, articles, and resources, sent to your inbox weekly.</p>
+    </section>
+    <!-- 3 Column Layout -->
+    <!-- This example requires Tailwind CSS v2.0+ -->
+    <section class="py-16 bg-gray-100">
+        <div class="container px-4 mx-auto max-w-screen-lg">
+            <h2 class="text-center text-4xl font-normal mb-2">室內空間</h2>
+            <div class="text-center uppercase font-light text-xl mb-4 tracking-wide">Interior</div>
+            <div class="flex flex-wrap -mx-2">
+                <div class="w-full sm:w-4/12 px-4 mb-8"> <img src="./asset/1/A1 卧室1.jpg"
+                        class="w-full mb-2 h-64 sm:h-52 overflow-hidden">
+                    <div class="text-center">卧室</div>
+                </div>
+                <div class="w-full sm:w-4/12 px-4 mb-8"> <img src="./asset/1/A3 客餐厅2.jpg"
+                        class="w-full mb-2 h-64 sm:h-52 overflow-hidden">
+                    <div class="text-center">客餐廳</div>
+                </div>
+                <div class="w-full sm:w-4/12 px-4 mb-8"> <img src="./asset/1/A3主卧2.jpg"
+                        class="w-full mb-2 h-64 sm:h-52 overflow-hidden">
+                    <div class="text-center">主卧</div>
+                </div>
+                <div class="w-full sm:w-4/12 px-4 mb-8"> <img src="./asset/1/主卧浴室-1.jpg"
+                        class="w-full mb-2 h-64 sm:h-52 overflow-hidden">
+                    <div class="text-center">主卧浴室</div>
+                </div>
+                <div class="w-full sm:w-4/12 px-4 mb-8"> <img src="./asset/1/主卧浴室-2.jpg"
+                        class="w-full mb-2 h-64 sm:h-52 overflow-hidden">
+                    <div class="text-center">主卧浴室</div>
+                </div>
+                <div class="w-full sm:w-4/12 px-4 mb-8"> <img src="./asset/1/客廳-2.jpg"
+                        class="w-full mb-2 h-64 sm:h-52 overflow-hidden">
+                    <div class="text-center">客廳</div>
+                </div>
+
+            </div>
         </div>
-        <form class="mt-4 sm:flex sm:max-w-md lg:mt-0">
-          <label for="email-address" class="sr-only">Email address</label>
-          <input type="email" name="email-address" id="email-address" autocomplete="email" required class="appearance-none min-w-0 w-full bg-white border border-transparent rounded-md py-2 px-4 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white focus:border-white focus:placeholder-gray-400 sm:max-w-xs" placeholder="Enter your email">
-          <div class="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-            <button type="submit" class="w-full bg-indigo-500 border border-transparent rounded-md py-2 px-4 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-indigo-500">Subscribe</button>
-          </div>
-        </form>
-      </div>
-      <div class="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
-        <div class="flex space-x-6 md:order-2">
-          <a href="#" class="text-gray-400 hover:text-gray-300">
-            <span class="sr-only">Facebook</span>
-            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
-            </svg>
-          </a>
+    </section>
 
-          <a href="#" class="text-gray-400 hover:text-gray-300">
-            <span class="sr-only">Instagram</span>
-            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" />
-            </svg>
-          </a>
 
-          <a href="#" class="text-gray-400 hover:text-gray-300">
-            <span class="sr-only">Twitter</span>
-            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
-            </svg>
-          </a>
 
-          <a href="#" class="text-gray-400 hover:text-gray-300">
-            <span class="sr-only">GitHub</span>
-            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
-            </svg>
-          </a>
+    <footer class="bg-gray-800 py-8 sm:py-16 text-white">
+        <div class="container mx-auto">
+            <div class="flex flex-wrap mx-0 px-3 sm:-mx-6">
+                <div class="w-full sm:w-4/12 px-8 sm:px-6">
+                    <h3 class="text-gray-300 text-xl font-normal mb-6">英特嵐建設</h3>
+                    <p class="text-gray-500">我們擁有網頁工程師的背景，對於程式品質具有極高的自我要求。在電子商務及數位行銷上更有著豐富的經驗。</p>
+                    <ul class="mt-6 flex">
+                        <li>
+                            <!-- FB -->
+                            <a target="_blank" rel="me noopener noreferrer"
+                                href="https://www.facebook.com/bigboycancode/">
+                                <svg class="h-10 w-10 inline-block mr-2" viewBox="0 0 512 512"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M497 512H15c-8.284 0-15-6.716-15-15V15C0 6.716 6.716 0 15 0h482c8.284 0 15 6.716 15 15v482c0 8.284-6.716 15-15 15z"
+                                        fill="#3a559f"></path>
+                                    <path d="M497 0H256v512h241c8.284 0 15-6.716 15-15V15c0-8.284-6.716-15-15-15z"
+                                        fill="#23448e"></path>
+                                    <path
+                                        d="M280.681 205.261v-19.248c0-43.534 13.761-42.284 55.081-42.284h1.974c5.523 0 10-4.477 10-10V85.325c0-5.5-4.5-10-10-10h-46.855c-44.753 0-81.37 36.616-81.37 81.37v19.007h-.149v29.559h-35.237c-5.523 0-10 4.477-10 10v46.755c0 5.523 4.477 10 10 10h35.237v154.658c0 5.523 4.477 10 10 10h51.249c5.523 0 10-4.477 10-10V272.017h47.263c5.523 0 10-4.477 10-10l10-46.755c0-5.523-4.477-10-10-10h-57.193z"
+                                        fill="#fff"></path>
+                                    <path
+                                        d="M337.874 205.261h-57.193v-19.248c0-43.534 13.761-42.284 55.081-42.284h1.974c5.523 0 10-4.477 10-10V85.325c0-5.5-4.5-10-10-10h-46.855A80.606 80.606 0 00256 83.238v353.437h14.612c5.523 0 10-4.477 10-10V272.017h47.263c5.523 0 10-4.477 10-10l10-46.755c-.001-5.524-4.478-10.001-10.001-10.001z"
+                                        fill="#d7f2f9"></path>
+                                </svg>
+                            </a>
 
-          <a href="#" class="text-gray-400 hover:text-gray-300">
-            <span class="sr-only">Dribbble</span>
-            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path fill-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z" clip-rule="evenodd" />
-            </svg>
-          </a>
+                        </li>
+                        <li>
+                            <a target="_blank" rel="me noopener noreferrer" href="https://line.me/ti/p/QlwtgbbMMS">
+                                <svg class="h-10 w-10 inline-block mr-2" viewBox="0 -11 512 512"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M435.863 60.645C387.683 21.535 323.805 0 256 0S124.32 21.535 76.137 60.645C27.039 100.488 0 153.746 0 210.602c0 53.503 24.348 104.472 68.555 143.515 39.937 35.27 92.96 58.04 150.535 64.875v55.856c0 8.285 6.715 15 15 15 25.945 0 96.18-31.84 155.476-77.528 35.422-27.293 63.809-56.601 84.368-87.12C499.19 287.71 512 249.151 512 210.601c0-56.856-27.04-110.114-76.137-149.957zm0 0"
+                                        fill="#54e360"></path>
+                                    <path
+                                        d="M435.863 60.645C387.683 21.535 323.805 0 256 0v485.73c33.285-9.988 86.82-37.394 133.566-73.41 35.422-27.293 63.809-56.601 84.368-87.12C499.19 287.71 512 249.151 512 210.601c0-56.856-27.04-110.114-76.137-149.957zm0 0"
+                                        fill="#1fbf66"></path>
+                                    <g fill="#e7f0ef">
+                                        <path
+                                            d="M164.555 246.516h-34.703v-88.211c0-6.54-6.008-10.93-14.946-10.93s-14.945 4.39-14.945 10.93v104.437c0 6.426 5.746 11.086 13.66 11.086h50.934c6.238 0 10.765-5.742 10.765-13.656 0-8.043-4.425-13.656-10.765-13.656zm0 0M197.668 147.375c-8.938 0-14.941 4.39-14.941 10.93v104.437c0 6.528 6.144 11.086 14.941 11.086 8.66 0 14.941-4.66 14.941-11.086V158.305c0-6.54-6.004-10.93-14.941-10.93zm0 0M299.871 147.375c-8.937 0-14.941 4.39-14.941 10.93v46.097l-22.528-43.535c-5.5-10.469-9.89-13.492-19.566-13.492-8.941 0-14.945 4.457-14.945 11.09v104.277c0 6.528 6.144 11.086 14.945 11.086 8.656 0 14.941-4.66 14.941-11.086v-46.637l26.102 48.801c3.246 5.922 8.629 8.922 15.996 8.922 8.656 0 14.941-4.66 14.941-11.086V158.305c0-6.54-6.003-10.93-14.945-10.93zm0 0">
+                                        </path>
+                                    </g>
+                                    <path
+                                        d="M400.95 246.516h-40.97v-23.297h19.922c7.203 0 11.086-6.457 11.086-12.535 0-7.329-4.765-12.856-11.086-12.856H359.98v-23.133h40.97c6.429 0 11.09-5.812 11.09-13.82 0-7.82-4.661-13.5-11.09-13.5h-57.2c-7.914 0-13.656 4.664-13.656 11.09v104.277c0 6.426 5.742 11.086 13.656 11.086h57.2c6.429 0 11.09-5.676 11.09-13.5 0-8.004-4.661-13.812-11.09-13.812zm0 0M299.871 147.375c-8.937 0-14.941 4.39-14.941 10.93v46.097l-22.528-43.535c-2.172-4.14-4.18-7.101-6.402-9.183V268.23a9.295 9.295 0 001.777-5.488v-46.637l26.102 48.801c3.246 5.922 8.629 8.922 15.996 8.922 8.656 0 14.941-4.66 14.941-11.086V158.305c0-6.54-6.003-10.93-14.945-10.93zm0 0"
+                                        fill="#c5e1e6"></path>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-full sm:w-4/12 px-8 sm:px-6 mt-8 sm:mt-0">
+                    <h3 class="text-gray-300 text-xl font-normal mb-6">導覽列</h3>
+                    <ul class="text-gray-500 font-normal">
+                        <li class="mb-2"><a href="./index.html">首頁</a></li>
+                        <li class="mb-2"><a href="./about.html">關於我們</a></li>
+                        <li class="mb-2"><a href="./history.html">作品</a></li>
+                        <li><a href="./contact.html">聯絡我們</a></li>
+                    </ul>
+                </div>
+                <div class="w-full sm:w-4/12 px-8 sm:px-6 mt-8 sm:mt-0">
+                    <h3 class="text-gray-300 text-xl font-normal mb-6">聯絡我們</h3>
+                    <ul class="text-gray-500 font-normal">
+                        <li class="mb-4 flex items-center">
+                            <svg class="h-5 w-5 fill-current text-teal-300 inline-block mr-2"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 20S3 10.87 3 7a7 7 0 1114 0c0 3.87-7 13-7 13zm0-11a2 2 0 100-4 2 2 0 000 4z">
+                                </path>
+                            </svg>
+                            高雄市三民區大順二路435號</li>
+                        <li class="mb-4 flex items-center">
+                            <svg class="h-5 w-5 fill-current text-teal-300 inline-block mr-2"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                <path
+                                    d="M20 18.35V19a1 1 0 01-1 1h-2A17 17 0 010 3V1a1 1 0 011-1h4a1 1 0 011 1v4c0 .56-.31 1.31-.7 1.7L3.16 8.84c1.52 3.6 4.4 6.48 8 8l2.12-2.12c.4-.4 1.15-.71 1.7-.71H19a1 1 0 01.99 1v3.35z">
+                                </path>
+                            </svg>
+                            07-386-6219</li>
+                        <li class="mb-4 flex items-end">
+                            <svg class="h-5 w-5 fill-current text-teal-300 inline-block mr-2"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                <path
+                                    d="M18 2a2 2 0 012 2v12a2 2 0 01-2 2H2a2 2 0 01-2-2V4c0-1.1.9-2 2-2h16zm-4.37 9.1L20 16v-2l-5.12-3.9L20 6V4l-10 8L0 4v2l5.12 4.1L0 14v2l6.37-4.9L10 14l3.63-2.9z">
+                                </path>
+                            </svg>
+                            intelligent.tw@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <p class="mt-8 text-base text-gray-400 md:mt-0 md:order-1">&copy; 2020 Workflow, Inc. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
+    </footer>
 </body>
+
 </html>
