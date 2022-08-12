@@ -11,8 +11,14 @@
 
     <style>
         header {
-            height: 300px;
-            background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1244&q=80") center right/cover no-repeat;
+            height: 400px;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("./asset/bg/exterior.jpg") center right/cover no-repeat;
+        }
+
+        @media only screen and (max-width: 600px) {
+            header {
+                height: 300px;
+            }
         }
 
         td,
@@ -88,7 +94,7 @@
                     <div class="hidden md:ml-6 md:flex md:space-x-8">
                         <!-- Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
                         <a href="/"
-                            class="border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                            class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
                             首頁 </a>
                         <a href="/about.html"
                             class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
@@ -97,7 +103,7 @@
                             class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
                             作品 </a>
                         <a href="/contact.html"
-                            class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                            class="border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
                             聯絡我們 </a>
                     </div>
                 </div>
@@ -110,13 +116,13 @@
             <div class="pt-2 pb-3 space-y-1">
                 <!-- Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" -->
                 <a href="/"
-                    class="bg-indigo-50 border-indigo-500 text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium sm:pl-5 sm:pr-6">首頁</a>
+                    class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium sm:pl-5 sm:pr-6">首頁</a>
                 <a href="/about.html"
                     class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium sm:pl-5 sm:pr-6">關於我們</a>
                 <a href="/history.html"
                     class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium sm:pl-5 sm:pr-6">作品</a>
                 <a href="/contact.html"
-                    class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium sm:pl-5 sm:pr-6">聯絡我們</a>
+                    class="bg-indigo-50 border-indigo-500 text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium sm:pl-5 sm:pr-6">聯絡我們</a>
             </div>
         </div>
     </nav>
@@ -128,7 +134,7 @@
     <section class="py-16 bg-gray-100">
         <div class="container px-4 mx-auto max-w-screen-lg">
             <div class="flex flex-wrap -mx-2">
-                <div class="w-full sm:w-7/12 px-2 map-container">
+                <div class="w-full sm:w-7/12 px-2 map-container mb-6 sm:mb-0">
                     <div class="map-responsive">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.1348852157225!2d120.3226763150529!3d22.64875898514366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0552612dc101%3A0x85e8f052d9cab60b!2z6Iux54m55bWQ6ZaL55m85bu66Kit5pyJ6ZmQ5YWs5Y-4!5e0!3m2!1szh-TW!2stw!4v1656380339862!5m2!1szh-TW!2stw"
@@ -138,25 +144,25 @@
                 </div>
                 <div class="w-full sm:w-5/12 px-6 text-xl">
                     <ul class="flex flex-col h-full">
-                        <li class="mb-3"><svg class="h-5 w-5 fill-current text-gray-600 inline-block mr-2"
+                        <li class="mb-3"><svg class="h-5 w-5 fill-current text-cyan-800 inline-block mr-2"
                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                 <path
                                     d="M10 20S3 10.87 3 7a7 7 0 1114 0c0 3.87-7 13-7 13zm0-11a2 2 0 100-4 2 2 0 000 4z">
                                 </path>
                             </svg>地址 高雄市三民區大順二路435號</li>
-                        <li class="mb-3"><svg class="h-5 w-5 fill-current text-gray-600 inline-block mr-2"
+                        <li class="mb-3"><svg class="h-5 w-5 fill-current  text-cyan-800 inline-block mr-2"
                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                 <path
                                     d="M20 18.35V19a1 1 0 01-1 1h-2A17 17 0 010 3V1a1 1 0 011-1h4a1 1 0 011 1v4c0 .56-.31 1.31-.7 1.7L3.16 8.84c1.52 3.6 4.4 6.48 8 8l2.12-2.12c.4-.4 1.15-.71 1.7-.71H19a1 1 0 01.99 1v3.35z">
                                 </path>
                             </svg>電話 07-386-6219</li>
-                        <li class="mb-3"><svg class="h-5 w-5 fill-current text-gray-600 inline-block mr-2"
+                        <li class="mb-3"><svg class="h-5 w-5 fill-current text-cyan-800 inline-block mr-2"
                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                 <path
                                     d="M20 18.35V19a1 1 0 01-1 1h-2A17 17 0 010 3V1a1 1 0 011-1h4a1 1 0 011 1v4c0 .56-.31 1.31-.7 1.7L3.16 8.84c1.52 3.6 4.4 6.48 8 8l2.12-2.12c.4-.4 1.15-.71 1.7-.71H19a1 1 0 01.99 1v3.35z">
                                 </path>
                             </svg>傳真 07-556-2899</li>
-                        <li><svg class="h-5 w-5 fill-current text-gray-600 inline-block mr-2"
+                        <li><svg class="h-5 w-5 fill-current  text-cyan-800 inline-block mr-2"
                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                 <path
                                     d="M18 2a2 2 0 012 2v12a2 2 0 01-2 2H2a2 2 0 01-2-2V4c0-1.1.9-2 2-2h16zm-4.37 9.1L20 16v-2l-5.12-3.9L20 6V4l-10 8L0 4v2l5.12 4.1L0 14v2l6.37-4.9L10 14l3.63-2.9z">
@@ -207,7 +213,7 @@
 
 
     <footer class="bg-gray-800 py-8 sm:py-16 text-white">
-        <div class="container mx-auto">
+        <div class="container mx-auto max-w-screen-lg">
             <div class="flex flex-wrap mx-0 px-3 sm:-mx-6">
                 <div class="w-full sm:w-4/12 px-8 sm:px-6">
                     <h3 class="text-gray-300 text-xl font-normal mb-6">英特嵐建設</h3>
